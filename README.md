@@ -92,6 +92,25 @@ Model saved to transformer.pth
 
 ---
 
+## Demo Notebook
+
+The [`notebooks/demo.ipynb`](notebooks/demo.ipynb) notebook walks through the model end-to-end:
+
+1. **Translations** — runs the trained model on 6 Italian sentences and prints the English output
+2. **Encoder Self-Attention** — heatmap of attention weights for layer 1, head 1
+3. **Decoder Cross-Attention** — shows which Italian words the model attends to when generating each English word
+4. **Multi-Head Comparison** — side-by-side view of all 4 attention heads in the encoder
+
+To run the notebook:
+
+```bash
+jupyter nbconvert --to notebook --execute notebooks/demo.ipynb --inplace
+```
+
+Plots are saved to `outputs/`.
+
+---
+
 ## Key Concepts
 
 ### Scaled Dot-Product Attention
